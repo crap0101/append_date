@@ -1,0 +1,2 @@
+Firefox extension that adds a button to save pages appending the current date to the file name.
+Example: "foobar.html" become "foobar_2023-09-15.html".
