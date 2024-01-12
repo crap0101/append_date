@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "append_date",
-    "version": "1.1",
+    "version": "1.2",
 
     "description": "Save webpages appending the current date to the title.",
 
