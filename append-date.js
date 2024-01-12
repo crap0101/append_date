@@ -15,7 +15,7 @@ function _get_date() {
     //console.log("*** entering function _get_date")
     const date = new Date(Date.now());
     const year = date.getFullYear();
-    const month = date.getMonth().toString().padStart(2, 0);
+    const month = (date.getMonth() + 1).toString().padStart(2, 0);
     const day = date.getDate().toString().padStart(2, 0);
     const date_string = `_${year}-${month}-${day}`;
     return date_string; //document.title += date_string;
