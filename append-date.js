@@ -35,13 +35,18 @@ function _remove_date(date_string) {
 
 browser.runtime.onMessage.addListener((request) => {
     //console.log(`from the background script: ${request.message}`);
+    //console.log(`[1] ${document.URL} | ${document.title}`)
+    var __title = document.title;
     const date_string = _get_date();
     _append_date(date_string);
-    const _log_title = document.title;
+    //console.log(`[2] ${document.URL} *** ${document.title}`)
     _download(document.URL, document.title);
+    //console.log(`[3] ${document.URL} *** ${document.title} *** ${__title}`)
     _remove_date(date_string);
+    //console.log(`[4] ${document.URL} *** ${document.title} *** ${__title}`)
+    document.title = __title
     return Promise.resolve(
-	{ response: `...saving "${document.URL}" as "${_log_title}"` });
+	{ response: `...saving "${document.URL}" as "${__title}"` });
 });
 
 
